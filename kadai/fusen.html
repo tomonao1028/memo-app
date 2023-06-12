@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>付箋アプリ
+</title>
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="fusen.css">
+</head>
+<main>
+    <div id="controller">
+        <input type="button" id="add-button" value="追加">
+      </div>
+      <div id="sticky-note-container">
+      
+      </div>
+</main>
+
+<script>
+function getNewNote() {
+    return  '<div class="note">' + 
+            '<input type="text">' +
+            '</div>';
+}
+
+$('#add-button').on('click', function(){
+    var note = $(getNewNote());
+    $('#sticky-note-container').append(note);
+});
+
+</script>
